@@ -1,0 +1,5 @@
+ngrok:
+  dockerfile: Dockerfile
+  build: .
+  ports:
+    - 4443:4443

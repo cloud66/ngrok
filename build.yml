@@ -1,0 +1,13 @@
+build:
+  version: 2016-03-14
+  steps:
+    builder:
+      name: builder
+      dockerfile: Dockerfile
+      artifacts:
+        - /app/bin/ngrokd
+    runtime:
+      name: ngrok
+      dockerfile: Dockerfile.production
+      depends_on:
+        - builder

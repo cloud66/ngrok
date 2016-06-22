@@ -1,0 +1,11 @@
+services:
+  api:
+    git_url: http://github.com/agalanom/ngrok.git
+    git_branch: master
+    use_habitus: true
+    use_habitus_step: runtime
+    volumes:
+    - "/var/ngrok:/var/ngrok"
+    ports:
+      - container: 4443
+        tcp: 4443
