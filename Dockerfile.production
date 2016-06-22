@@ -3,6 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER Andreas Galanomatis
 
 RUN mkdir -p /app
+RUN mkdir -p /app/certs
 WORKDIR /app
 
 # copy the binary

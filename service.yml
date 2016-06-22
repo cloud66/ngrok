@@ -1,5 +1,5 @@
 services:
-  api:
+  ngrok:
     git_url: http://github.com/agalanom/ngrok.git
     git_branch: master
     use_habitus: true
