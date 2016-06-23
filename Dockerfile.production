@@ -1,4 +1,4 @@
-# use the alpine base image
+# use the ubuntu base image
 FROM ubuntu:14.04
 MAINTAINER Andreas Galanomatis
 
@@ -11,4 +11,4 @@ ADD ./ngrokd /app
 
 RUN chown root /app/ngrokd && chmod 700 /app/ngrokd
 
-CMD /app/bin/ngrokd -domain $NGROK_DOMAIN -log /var/log/ngrokd.log
+CMD /app/ngrokd -domain="$NGROK_DOMAIN"

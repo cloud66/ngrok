@@ -2,4 +2,8 @@ ngrok:
   dockerfile: Dockerfile
   build: .
   ports:
+    - 80:80
+    - 443:443
     - 4443:4443
+  environment:
+    - NGROK_DOMAIN

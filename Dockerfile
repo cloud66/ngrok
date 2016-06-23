@@ -11,4 +11,4 @@ ADD . /app
 
 RUN make release-server
 
-CMD /app/ngrokd -domain $NGROK_DOMAIN -log /var/log/ngrokd.log
+CMD /app/bin/ngrokd -domain="$NGROK_DOMAIN"

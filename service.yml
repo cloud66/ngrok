@@ -1,3 +1,4 @@
+---
 services:
   ngrok:
     git_url: http://github.com/agalanom/ngrok.git
@@ -7,5 +8,8 @@ services:
     volumes:
     - "/var/ngrok:/var/ngrok"
     ports:
-      - container: 4443
-        tcp: 4443
+    - container: 80
+      http: 80
+      https: 443
+    - container: 4443
+      tcp: 4443
