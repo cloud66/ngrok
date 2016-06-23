@@ -8,13 +8,15 @@ deps: assets
 	go get -tags '$(BUILDTAGS)' -d -v ngrok/...
 
 server: deps
-	go install -tags '$(BUILDTAGS)' ngrok/main/ngrokd
+	CGO_ENABLED=0 go install -a -installsuffix cgo -tags '$(BUILDTAGS)' ngrok/main/ngrokd
+	# go install -tags '$(BUILDTAGS)' ngrok/main/ngrokd
 
 fmt:
 	go fmt ngrok/...
 
 client: deps
-	go install -tags '$(BUILDTAGS)' ngrok/main/ngrok
+	CGO_ENABLED=0 go install -a -installsuffix cgo -tags '$(BUILDTAGS)' ngrok/main/ngrok
+	# go install -tags '$(BUILDTAGS)' ngrok/main/ngrok
 
 assets: client-assets server-assets
 

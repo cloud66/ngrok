@@ -1,5 +1,5 @@
-# use the ubuntu base image
-FROM ubuntu:14.04
+# use the alpine base image
+FROM alpine:3.3
 MAINTAINER Andreas Galanomatis
 
 RUN mkdir -p /app
@@ -9,6 +9,6 @@ WORKDIR /app
 # copy the binary
 ADD ./ngrokd /app
 
-RUN chown root /app/ngrokd && chmod 700 /app/ngrokd
+# RUN chown root /app/ngrokd && chmod 700 /app/ngrokd
 
 CMD /app/ngrokd -domain="$NGROK_DOMAIN"
