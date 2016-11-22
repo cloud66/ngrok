@@ -1,6 +1,6 @@
 # use the alpine base image
-FROM alpine:3.3
-MAINTAINER Andreas Galanomatis
+FROM alpine:3.4
+MAINTAINER Vic van Gool
 
 RUN mkdir -p /app
 RUN mkdir -p /app/certs
