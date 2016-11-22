@@ -1,6 +1,6 @@
 # use the golang base image
-FROM golang:1.6
-MAINTAINER Andreas Galanomatis
+FROM golang:1.7.3
+MAINTAINER Vic van Gool
 
 # switch to our app directory
 RUN mkdir -p /app
