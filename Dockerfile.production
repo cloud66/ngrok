@@ -9,6 +9,8 @@ WORKDIR /app
 # copy the binary
 ADD ./ngrokd /app
 
+RUN chmod u+x /app/ngrokd
+
 # RUN chown root /app/ngrokd && chmod 700 /app/ngrokd
 
 CMD /app/ngrokd -domain="$NGROK_DOMAIN"
